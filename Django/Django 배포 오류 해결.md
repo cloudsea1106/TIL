@@ -61,3 +61,56 @@
   $ sudo systemctl restart uwsgi
   $ sudo systemctl restart nginx
   ```
+
+
+
+
+
+### ✨도메인 연결 오류
+
+- 도메인 구매 후, DNS 연결
+
+  - 레코드 추가
+  - 타입: `A`, 호스트: `@`, 값: IP주소 `xxx.xxx.xxx.xxx`, TTL: `600`
+
+- IP 찾는 방법
+
+  - CMD 실행
+  - tracert <주소>
+    - 주소 첫 부분에 `http://` 입력하지 않음, 마지막 부분에 `/` 입력하지 않음
+    - 예) `tracert naver.com`
+
+- nginx 설정
+
+  ```bash
+  # 경로
+  $ /etc/nginx/site-available/dafault
+  ```
+
+  ```bash
+  # defalut
+  server {
+          listen 80 default_server;
+          listen [::]:80 default_server;
+  		server_name <도메인주소> <www.도메인주소>
+  		...
+  }
+  
+  # 예시
+  server {
+          listen 80 default_server;
+          listen [::]:80 default_server;
+  		server_name abc.com www.abc.com
+  		...
+  }
+  ```
+
+- 재시작
+
+  ```bash
+  $ sudo systemctl daemon-reload
+  $ sudo systemctl restart uwsgi
+  $ sudo systemctl restart nginx
+  ```
+
+  
