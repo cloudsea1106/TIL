@@ -30,6 +30,8 @@
 
 ### ✨500 Internal Server Error
 
+##### (1) uwsgi 경로 설정 오류
+
 - 프론트에서 백엔드로 보내는 요청 주소 설정
 
   ```js
@@ -60,6 +62,34 @@
   ```bash
   $ sudo systemctl restart uwsgi
   $ sudo systemctl restart nginx
+  ```
+
+
+
+##### (2) 이미지 파일 최대 크기 설정 오류
+
+- 오류 메시지
+
+  ```
+  TypeError: cannot pickle '_io.bufferedrandom' object
+  ```
+
+- 오류 상황
+
+  - POST 요청으로 새로 사진을 업로드할 때는 nginx에 설정한 최대 크기까지 가능
+
+  - PUT 요청으로 사진을 수정할 때 nginx에 설정한 최대 크기가 아닌, 
+
+    django의 이미지필드 기본 최대 크기인 2.5MB까지만 가능
+
+- 오류 해결
+
+  ```python
+  # <프로젝트>/settings.py
+  # 30MB까지 업로드 가능하도록 설정
+  # 프론트에서 파일 크기가 30MB가 넘으면 경고창 띄우기 추가
+  
+  FILE_UPLOAD_MAX_MEMORY_SIZE = 30 * 1024 * 1024  
   ```
 
 
@@ -113,4 +143,4 @@
   $ sudo systemctl restart nginx
   ```
 
-  
+
