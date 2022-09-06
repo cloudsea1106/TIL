@@ -6,9 +6,11 @@ GITLAB의 원본이 사라지지 않음
 
 -------------------------------------
 
+[TOC]
 
 
-### ✨복사하기
+
+### ✨대용량 파일/커밋이 없는 경우
 
 GitLab과 GitHub의 이메일이 다르다면 미리 `[Settings]-[Emails]-[Add email address]`에서 이메일 추가
 
@@ -35,6 +37,71 @@ GitLab과 GitHub의 이메일이 다르다면 미리 `[Settings]-[Emails]-[Add e
    ```
 
 4. GitLab에서 로컬에 bare clone 한 저장소 폴더 삭제
+
+
+
+
+
+### ✨대용량 파일/커밋이 있는 경우
+
+0. 참고
+
+   - [GitLab -> GitHub 대용량 프로젝트 이동](https://coding-nurse.tistory.com/m/431)
+
+   - [이미 푸시된 커밋 작성자 이름, 이메일 변경](https://devsmin.tistory.com/65)
+
+1. java 사전 설치, 환경변수 설정 필요
+
+2. 복사할 GitLab 저장소 clone
+
+```bash
+$ git clone --mirror <GitLab 저장소 주소>
+```
+
+3. clone 받은 <GitLab 저장소 이름>.git과 같은 레벨에 bfg-1.14.0.jar 위치시키기
+
+[bfg-1.14.0.jar 다운](https://rtyley.github.io/bfg-repo-cleaner/)
+
+4. 대용량 파일 삭제
+
+```bash
+$ java -jar bfg-1.14.0.jar --strip-blobs-bigger-than 100M <GitLab 저장소 이름>.git/
+```
+
+5. GitLab 저장소 폴더로 이동 (이후 계속 GitLab 저장소 폴더 안에서 진행)
+
+```bash
+$ cd <GitLab 저장소 이름>.git/
+```
+
+6. 삭제 내용 적용
+
+```bash
+$ git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+7. 유저네임, 유저이메일 확인하기
+
+```
+$ git config user.name
+$ git config user.email
+```
+
+8. 이미 push된 커밋 작성자 이름과 이메일을 GitHub 나의 이름과 이메일로 설정하기
+
+```bash
+$ git filter-branch -f --env-filter "GIT_AUTHOR_NAME='깃허브 작성자 이름'; GIT_AUTHOR_EMAIL='깃허브 작성자 이메일'; GIT_COMMITTER_NAME='깃허브 작성자 이름'; GIT_COMMITTER_EMAIL='깃허브 작성자 이메일';" HEAD
+```
+
+9. 새로운 GitHub 저장소로 mirror push
+
+- GitHub에 먼저 새로운 저장소 생성해두기
+- 오류를 방지하기 위해 GitHub의 기본 브랜치 이름을 GitLab과 동일하게 설정하기(main, master 등)
+- GitLab 저장소의 `Settings-Repository-Protected branches`에서 protect 해제
+
+```bash
+$ git push --mirror https://github.com/<유저 아이디>/<GitHub 저장소 이름>.git
+```
 
 
 
