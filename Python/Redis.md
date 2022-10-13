@@ -2,7 +2,7 @@
 
 파이썬에서 redis 사용하기
 
-참고: [django-redis 설정, redis 설치](../Django/Django Redis.md)
+참고: [django-redis 설정, redis 설치](https://github.com/cloudsea1106/TIL/blob/master/Django/Django%20Redis.md)
 
 ------------------
 
@@ -14,7 +14,8 @@
 
 - 리눅스 (또는 윈도우) 환경에서 redis가 설치되어 있어야 함
 
-- 포트 오픈 확인 (리눅스)![redis-1](Redis.assets/redis-1.png)
+- 포트 오픈 확인 (리눅스)
+- ![redis-1](Redis.assets/redis-1.png)
 
   ```bash
   $ netstat -nlpt | grep 6379
@@ -22,7 +23,8 @@
 
   - 6379 포트가 열려있는지 확인(redis 기본 포트)
 
-- 방화벽 확인 (리눅스)![redis-2](Redis.assets/redis-2.png)
+- 방화벽 확인 (리눅스)
+- ![redis-2](Redis.assets/redis-2.png)
 
   ```bash
   $ sudo ufw status
