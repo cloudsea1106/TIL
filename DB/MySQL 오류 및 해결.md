@@ -1,12 +1,14 @@
-# 📌MySQL 오류 및 해결
+# 📌MySQL error
 
 ---------------
 
-[TOC]
+### 목차
+
+1. [1175](#error-code-1175-you-are-using-safe-update-mode)
 
 
 
-### ✨error code: 1175. you are using safe update mode
+### error code: 1175. you are using safe update mode
 
 - 다수의 데이터를 키값을 사용하지 않고 삭제 또는 수정하려고 시도했을 때 발생
 
@@ -34,11 +36,11 @@
   - 워크벤치 재시작 필요
 
 
-![1175-1](MySQL 오류 및 해결.assets/1175-1.png)
+![1175-1](MySQL_error.assets/1175-1.png)
 
 `Edit > Preferences` 선택
 
-![1175-2](MySQL 오류 및 해결.assets/1175-2.png)
+![1175-2](MySQL_error.assets/1175-2.png)
 
 `SQL Editor > Safe Updates` 체크박스 해제, `OK` 
 
