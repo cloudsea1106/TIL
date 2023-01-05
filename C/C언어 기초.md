@@ -32,6 +32,56 @@
   - [정수 1개 입력받아 나누어 출력하기](#정수-1개-입력받아-나누어-출력하기)
   - [시분초 입력받아 분만 출력하기](#시분초-입력받아-분만-출력하기)
   - [년월일 입력받아 형식 바꿔 출력하기](#년월일-입력받아-형식-바꿔-출력하기)
+- [데이터형](#데이터형)
+  - [정수 1개 입력받아 그대로 출력하기2](#정수-1개-입력받아-그대로-출력하기2)
+  - [실수 1개 입력받아 그대로 출력하기2](#실수-1개-입력받아-그대로-출력하기2)
+  - [정수 1개 입력받아 그대로 출력하기3](#정수-1개-입력받아-그대로-출력하기3)
+- [출력변환](#출력변환)
+  - [10진 정수 1개 입력받아 8진수로 출력하기](#10진-정수-1개-입력받아-8진수로-출력하기)
+  - [10진 정수 입력받아 16진수로 출력하기1](#10진-정수-입력받아-16진수로-출력하기1)
+  - [10진 정수 입력받아 16진수로 출력하기2](#10진-정수-입력받아-16진수로-출력하기2)
+  - [8진 정수 1개 입력받아 10진수로 출력하기](#8진-정수-1개-입력받아-10진수로-출력하기)
+  - [16진 정수 1개 입력받아 8진수로 출력하기](#16진-정수-1개-입력받아-8진수로-출력하기)
+  - [영문자 1개 입력받아 10진수로 출력하기](#영문자-1개-입력받아-10진수로-출력하기)
+  - [정수 입력받아 아스키 문자로 출력하기](#정수-입력받아-아스키-문자로-출력하기)
+- [산술연산](#산술연산)
+  - [정수 2개 입력받아 합 출력하기1 2](#정수-2개-입력받아-합-출력하기1-2)
+  - [정수 1개 입력받아 부호 바꿔 출력하기](#정수-1개-입력받아-부호-바꿔-출력하기)
+  - [정수 2개 입력받아 나눈 몫 출력하기](#정수-2개-입력받아-나눈-몫-출력하기)
+  - [정수 2개 입력받아 나눈 나머지 출력하기](#정수-2개-입력받아-나눈-나머지-출력하기)
+  - [정수 1개 입력받아 1 더해 출력하기](#정수-1개-입력받아-1-더해-출력하기)
+  - [정수 2개 입력받아 자동 계산하기](#정수-2개-입력받아-자동-계산하기)
+  - [정수 3개 입력받아 합과 평균 출력하기](#정수-3개-입력받아-합과-평균-출력하기)
+- [비트시프트연산](#비트시프트연산)
+  - [정수 1개 입력받아 2배 곱해 출력하기](#정수-1개-입력받아-2배-곱해-출력하기)
+  - [한 번에 2의 거듭제곱 배로 출력하기](#한-번에-2의-거듭제곱-배로-출력하기)
+- [비교연산](#비교연산)
+  - [두 정수 입력받아 비교하기1](#두-정수-입력받아-비교하기1)
+  - [두 정수 입력받아 비교하기2](#두-정수-입력받아-비교하기2)
+  - [두 정수 입력받아 비교하기3](#두-정수-입력받아-비교하기3)
+  - [두 정수 입력받아 비교하기4](#두-정수-입력받아-비교하기4)
+- [논리연산](#논리연산)
+  - [참 거짓 바꾸기](#참-거짓-바꾸기)
+  - [둘 다 참일 경우만 참 출력하기](#둘-다-참일-경우만-참-출력하기)
+  - [하나라도 참이면 참 출력하기](#하나라도-참이면-참-출력하기)
+  - [참/거짓이 서로 다를 때에만 참 출력하기](#참/거짓이-서로-다를-때에만-참-출력하기)
+  - [참/거짓이 서로 같을 때에만 참 출력하기](#참/거짓이-서로-같을-때에만-참-출력하기)
+  - [둘 다 거짓일 경우만 참 출력하기](#둘-다-거짓일-경우만-참-출력하기)
+- [비트단위논리연산](#비트단위논리연산)
+  - [비트단위로 NOT 하여 출력하기](#비트단위로-NOT-하여-출력하기)
+  - [비트단위로 AND 하여 출력하기](#비트단위로-AND-하여-출력하기)
+  - [비트단위로 OR 하여 출력하기](#비트단위로-OR-하여-출력하기)
+  - [비트단위로 XOR 하여 출력하기](#비트단위로-XOR-하여-출력하기)
+- [삼항연산](#삼항연산)
+  - [두 정수 입력받아 큰 수 출력하기](#두-정수-입력받아-큰-수-출력하기)
+  - [정수 3개 입력받아 가장 작은 수 출력하기](#정수-3개-입력받아-가장-작은-수-출력하기)
+- [조건/선택실행구조](#조건/선택실행구조)
+  - [정수 3개 입력받아 짝수만 출력하기](#정수-3개-입력받아-짝수만-출력하기)
+  - [정수 3개 입력받아 짝/홀 출력하기](#정수-3개-입력받아-짝/홀-출력하기)
+  - [정수 1개 입력받아 분석하기](#정수-1개-입력받아-분석하기)
+  - [정수 1개 입력받아 평가 출력하기](#정수-1개-입력받아-평가-출력하기)
+  - [평가 입력받아 다르게 출력하기](#평가-입력받아-다르게-출력하기)
+  - [월 입력받아 계절 출력하기](#월-입력받아-계절-출력하기)
 
 
 
@@ -522,4 +572,903 @@ int main()
 ```
 
 
+
+### 데이터형
+
+##### 정수 1개 입력받아 그대로 출력하기2
+
+- 입력되는 정수의 범위는 0 ~ 4,294,967,295
+- `int`: -2,147,483,648 ~ +2,147,483,647
+- `unsigned int`: 0 ~ 4,294,967,295
+- `%d`가 아닌 `%u`임에 주의
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    unsigned int n;
+    scanf("%u", &n);
+    printf("%u", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 실수 1개 입력받아 그대로 출력하기2
+
+- 입력되는 실수의 범위는 `+- 1.7*(10**(-308)) ~ +- 1.7*(10**308)`
+- 소수점 아래 12자리에서 반올림하여 소수점 아래 11자리까지 출력
+
+- `float`: `+- 3.4*(10**(-38)) ~ +- 3.4*(10**38)`
+- `double`: `+- 1.7*(10**(-308)) ~ +- 1.7*(10**308)`
+
+- `double`은 `float`보다 더 정확하게 저장할 수 있지만, 2배의 저장 공간이 필요
+- `%f`가 아닌 `%lf`임에 주의
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    double d;
+    scanf("%lf", &d);
+    printf("%.11lf", d);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 1개 입력받아 그대로 출력하기3
+
+- 입력되는 정수의 범위는 -9,223,372,036,854,775,808 ~ +9,223,372,036,854,775,807
+- `int`: -2,147,483,648 ~ +2,147,483,647
+- `long long int`: -9,223,372,036,854,775,808 ~ +9,223,372,036,854,775,807
+- `%d`가 아닌 `%lld`임에 주의
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int n;
+    scanf("%lld", &n);
+    printf("%lld", n);
+    
+    return 0;
+}
+```
+
+
+
+### 출력변환
+
+##### 10진 정수 1개 입력받아 8진수로 출력하기
+
+- `%d`: 10진수
+- `%o`: 8진수
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%o", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 10진 정수 입력받아 16진수로 출력하기1
+
+- `%d`: 10진수
+- `%x`: 16진수 소문자
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%x", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 10진 정수 입력받아 16진수로 출력하기2
+
+- `%x`: 16진수 소문자
+- `%X`: 16진수 대문자
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%X", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 8진 정수 1개 입력받아 10진수로 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%o", &n);
+    printf("%d", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 16진 정수 1개 입력받아 8진수로 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%x", &n);
+    printf("%o", n);
+    
+    return 0;
+}
+```
+
+
+
+##### 영문자 1개 입력받아 10진수로 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char x;
+    scanf("%c", &x);
+    printf("%d", x);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 입력받아 아스키 문자로 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%c", n);
+    
+    return 0;
+}
+```
+
+
+
+### 산술연산
+
+##### 정수 2개 입력받아 합 출력하기1 2
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%lld", a+b);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 1개 입력받아 부호 바꿔 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%d", n*(-1));
+    
+    return 0;
+}
+```
+
+
+
+##### 문자 1개 입력받아 다음 문자 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char x;
+    scanf("%c", &x);
+    printf("%c", x+1);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 2개 입력받아 나눈 몫 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a/b);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 2개 입력받아 나눈 나머지 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a%b);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 1개 입력받아 1 더해 출력하기
+
+- `++n`과 `n++` 차이 주의
+- `printf("%lld", ++n)`: 기존 변수 값에 1을 더한 후 출력
+- `printf("%lld", n++)`: 기존 변수 값을 출력한 후 1을 더함
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int n;
+    scanf("%lld", &n);
+    printf("%lld", ++n);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 2개 입력받아 자동 계산하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%lld\n%lld\n%lld\n%lld\n%lld\n%.2f", a+b, a-b, a*b, a/b, a%b, (float)a/b);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 3개 입력받아 합과 평균 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b, c;
+    scanf("%lld %lld %lld", &a, &b, &c);
+    printf("%lld\n%.1f", a+b+c, (float)(a+b+c)/3);
+    
+    return 0;
+}
+```
+
+
+
+### 비트시프트연산
+
+##### 정수 1개 입력받아 2배 곱해 출력하기
+
+- `<<`: 2진수 형태로 저장된 값에서 지정한 비트 수만큼 오른쪽에 0 추가
+- `>>`: 2진수 형태로 저장된 값에서 지정한 비트 수만큼 왼쪽에 0(0또는 양의 정수인 경우)이나 1(음의 정수인 경우) 추가
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("%d", n<<1);
+    
+    return 0;
+}
+```
+
+
+
+##### 한 번에 2의 거듭제곱 배로 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a<<b);
+    
+    return 0;
+}
+```
+
+
+
+### 비교연산
+
+##### 두 정수 입력받아 비교하기1
+
+- `a`가 `b`보다 크면 `1`, `a`가 `b`보다 작거나 같으면 `0`을 출력
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a>b);
+    
+    return 0;
+}
+```
+
+
+
+##### 두 정수 입력받아 비교하기2
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a==b);
+    
+    return 0;
+}
+```
+
+
+
+##### 두 정수 입력받아 비교하기3
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%d", b>=a);
+    
+    return 0;
+}
+```
+
+
+
+##### 두 정수 입력받아 비교하기4
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%d", a!=b);
+    
+    return 0;
+}
+```
+
+
+
+### 논리연산
+
+##### 참 거짓 바꾸기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("%d", !a);
+    
+    return 0;
+}
+```
+
+
+
+##### 둘 다 참일 경우만 참 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a&&b);
+    
+    return 0;
+}
+```
+
+
+
+##### 하나라도 참이면 참 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a||b);
+    
+    return 0;
+}
+```
+
+
+
+##### 참/거짓이 서로 다를 때에만 참 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", (a&&!b)||(!a&&b));
+    
+    return 0;
+}
+```
+
+
+
+##### 참/거짓이 서로 같을 때에만 참 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", (a&&b)||(!a&&!b));
+    
+    return 0;
+}
+```
+
+
+
+##### 둘 다 거짓일 경우만 참 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", (!a&&!b));
+    
+    return 0;
+}
+```
+
+
+
+### 비트단위논리연산
+
+##### 비트단위로 NOT 하여 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("%d", ~a);
+    
+    return 0;
+}
+```
+
+
+
+##### 비트단위로 AND 하여 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a&b);
+    
+    return 0;
+}
+```
+
+
+
+##### 비트단위로 OR 하여 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a|b);
+    
+    return 0;
+}
+```
+
+
+
+##### 비트단위로 XOR 하여 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a^b);
+    
+    return 0;
+}
+```
+
+
+
+### 삼항연산
+
+##### 두 정수 입력받아 큰 수 출력하기
+
+- 3항 연산자: `조건식 ? (참일 때의 값) : (거짓일 때의 값)`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a>b?a:b);
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 3개 입력받아 가장 작은 수 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    printf("%d", (a<b?a:b)<c?(a<b?a:b):c);
+    
+    return 0;
+}
+```
+
+
+
+### 조건/선택실행구조
+
+##### 정수 3개 입력받아 짝수만 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    if (a%2==0)
+    {
+        printf("%d\n", a);
+    }
+    
+    if (b%2==0)
+    {
+        printf("%d\n", b);
+    }
+    
+    if (c%2==0)
+    {
+        printf("%d", c);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 3개 입력받아 짝/홀 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if (a%2==1)
+    {
+        printf("odd\n");
+    }
+    
+    else
+    {
+        printf("even\n");
+    }
+    
+    if (b%2==1)
+    {
+        printf("odd\n");
+    }
+    
+    else
+    {
+        printf("even\n");
+    }
+    
+    if (c%2==1)
+    {
+        printf("odd\n");
+    }
+    
+    else
+    {
+        printf("even");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 1개 입력받아 분석하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    
+    if (a<0)
+    {
+        if (a%2==0)
+        {
+            printf("minus\neven");
+        }
+        
+        else
+        {
+            printf("minus\nodd");
+        }
+    }
+    
+    else
+    {
+        if (a%2==1)
+        {
+            printf("plus\nodd");
+        }
+        
+        else
+        {
+            printf("plus\neven");
+        }
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 정수 1개 입력받아 평가 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    
+    if (a>=90&&a<=100)
+    {
+        printf("A");
+    }
+    
+    else if (a>=70)
+    {
+        printf("B");
+    }
+    
+    else if (a>=40)
+    {
+        printf("C");
+    }
+    
+    else
+    {
+        printf("D");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 평가 입력받아 다르게 출력하기
+
+- `switch()`에 주어지는 값은 정수값만 가능 (문자도 아스키코드 정수값이기 때문에 가능)
+- `break`를 쓰지 않으면 이후의 명령들도 계속 실행
+- `default`는 제시된 case를 제외한 나머지 모든 경우에 실행
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char x;
+    scanf("%c", &x);
+    
+    switch(x)
+    {
+        case 'A':
+            printf("best!!!");
+            break;
+        case 'B':
+            printf("good!!");
+            break;
+        case 'C':
+            printf("run!");
+            break;
+        case 'D':
+            printf("slowly~");
+            break;
+        default:
+            printf("what?");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 월 입력받아 계절 출력하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    
+    switch(a)
+    {
+        case 1:
+        case 2:
+        case 12:
+            printf("winter");
+            break;
+        case 3:
+        case 4:
+        case 5:
+            printf("spring");
+            break;
+        case 6:
+        case 7:
+        case 8:
+            printf("summer");
+            break;
+        case 9:
+        case 10:
+        case 11:
+            printf("fall");
+            break;
+    }
+    
+    return 0;
+}
+```
 
