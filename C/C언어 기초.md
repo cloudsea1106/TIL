@@ -93,7 +93,19 @@
 - [종합](#종합)
   - [짝수 합 구하기](#짝수-합-구하기)
   - [원하는 문자가 입력될 때까지 반복 출력하기](#원하는-문자가-입력될-때까지-반복-출력하기)
-  - [언제까지 더해야 할까?](#언제까지-더해야-할까?)
+  - [언제까지 더해야 할까?](#언제까지-더해야-할까)
+  - [주사위를 2개 던지면?](#주사위를-2개-던지면)
+  - [16진수 구구단?](#16진수-구구단)
+  - [3 6 9 게임의 왕이 되자!](#3-6-9-게임의-왕이-되자)
+  - [빛 섞어 색 만들기](#빛-섞어-색-만들기)
+  - [소리 파일 저장용량 계산하기](#소리-파일-저장용량-계산하기)
+  - [그림 파일 저장용량 계산하기](#그림-파일-저장용량-계산하기)
+  - [여기까지! 이제 그만~](#여기까지-이제-그만)
+  - [3의 배수는 통과?](#3의-배수는-통과)
+  - [수 나열하기1](#수-나열하기1)
+  - [수 나열하기2](#수-나열하기2)
+  - [수 나열하기3](#수-나열하기3)
+  - [함께 문제 푸는 날](#함께-문제-푸는-날)
 
 
 
@@ -1739,6 +1751,305 @@ int main()
     return 0;
 }
 ```
+
+
+
+##### 주사위를 2개 던지면?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d %d", &n, &m);
+    
+    for (int i=1; i<=n; i++)
+    {
+        for (int j=1; j<=m; j++)
+        {
+            printf("%d %d\n", i, j);
+        }
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 16진수 구구단?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%X", &a);
+    for (int i=1; i <=15; i++)
+    {
+        printf("%X*%X=%X\n", a, i, a*i);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 3 6 9 게임의 왕이 되자!
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    for (int i=1; i<=a; i++)
+    {
+        if (i%3==0)
+        {
+            printf("X ");
+        }
+        
+        else
+        {
+            printf("%d ", i);
+        }
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 빛 섞어 색 만들기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int r, g, b;
+    scanf("%d %d %d", &r, &g, &b);
+    for (int i=0; i<r; i++)
+    {
+        for (int j=0; j<g; j++)
+        {
+            for (int k=0; k<b; k++)
+            {
+                printf("%d %d %d\n", i, j, k);
+            }
+        }
+    }
+    printf("%d", r*g*b);
+    
+    return 0;
+}
+```
+
+
+
+##### 소리 파일 저장용량 계산하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int h, b, c, s;
+    scanf("%d %d %d %d", &h, &b, &c, &s);
+    printf("%.1f MB", (float)h*b*c*s/8/1024/1024);
+    
+    return 0;
+}
+```
+
+
+
+##### 그림 파일 저장용량 계산하기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int w, h, b;
+    scanf("%d %d %d", &w, &h, &b);
+    printf("%.2f MB", (float)w*h*b/8/1024/1024);
+    
+    return 0;
+}
+```
+
+
+
+##### 여기까지! 이제 그만~
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d", &a);
+    b=0;
+    for (int i=1; b<a; i++)
+    {
+        b += i;
+    }
+    printf("%d", b);
+    
+    return 0;
+}
+```
+
+
+
+##### 3의 배수는 통과?
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    for (int i=1; i<=a; i++)
+    {
+        if (i%3==0)
+        {
+            continue;
+        }
+        
+        else
+        {
+            printf("%d ", i);
+        }
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 수 나열하기1
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, d, n;
+    scanf("%d %d %d", &a, &d, &n);
+    
+    if (n==1)
+    {
+        printf("%d",  a);
+    }
+    
+    else
+    {
+        for (int i=2; i<=n; i++)
+        {
+            a += d;
+        }
+        printf("%d", a);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 수 나열하기2
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a;
+    int r, n;
+    scanf("%lld %d %d", &a, &r, &n);
+    if (n==1)
+    {
+        printf("%lld", a);
+    }
+    
+    else
+    {
+        for (int i=2; i<=n; i++)
+        {
+            a *= r;
+        }
+        printf("%lld", a);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 수 나열하기3
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    long long int a;
+    int m, d, n;
+    
+    scanf("%lld %d %d %d", &a, &m, &d, &n);
+    if (n==1)
+    {
+        printf("%lld", a);
+    }
+    
+    else
+    {
+        for (int i=2; i<=n; i++)
+        {
+            a = a*m + d;
+        }
+        printf("%lld", a);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 함께 문제 푸는 날
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    int d=1;
+    while (d%a!=0 || d%b!=0 || d%c!=0)
+    {
+        d += 1;
+    }
+    printf("%d", d);
+    
+    return 0;
+}
+```
+
+
 
 
 
