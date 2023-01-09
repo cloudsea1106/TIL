@@ -106,6 +106,15 @@
   - [수 나열하기2](#수-나열하기2)
   - [수 나열하기3](#수-나열하기3)
   - [함께 문제 푸는 날](#함께-문제-푸는-날)
+- [1차원배열](#1차원배열)
+  - [이상한 출석 번호 부르기1](#이상한-출석-번호-부르기1)
+  - [이상한 출석 번호 부르기2](#이상한-출석-번호-부르기2)
+  - [이상한 출석 번호 부르기3](#이상한-출석-번호-부르기3)
+- [2차원배열](#2차원배열)
+  - [바둑판에 흰 돌 놓기](#바둑판에-흰-돌-놓기)
+  - [바둑알 십자 뒤집기](#바둑알-십자-뒤집기)
+  - [설탕과자 뽑기](#설탕과자-뽑기)
+  - [성실한 개미](#성실한-개미)
 
 
 
@@ -2051,5 +2060,308 @@ int main()
 
 
 
+### 1차원배열
 
+##### 이상한 출석 번호 부르기1
+
+- 배열 값 0으로 초기화 `int a[24]={}`
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d", &n);
+    int a[24]={};
+    for (int i=1; i<=n; i++)
+    {
+        scanf("%d ", &m);
+        a[m] += 1;
+    }
+    
+    for (int j=1; j<=23; j++)
+    {
+        printf("%d ", a[j]);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 이상한 출석 번호 부르기2
+
+- 배열 크기가 가변적일 때는 배열 값을 0으로 초기화할 수 없음 `int a[n]={}` (X)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d", &n);
+    int a[n];
+    for (int i=1; i<=n; i++)
+    {
+        scanf("%d ", &m);
+        a[i-1] = m;
+    }
+    
+    for (int j=n-1; j>=0; j--)
+    {
+        printf("%d ", a[j]);
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 이상한 출석 번호 부르기3
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d", &n);
+    int a[24]={};
+    for (int i=1; i<=n; i++)
+    {
+        scanf("%d ", &m);
+        a[m] = 1;
+    }
+    
+    for (int j=1; j<=23; j++)
+    {
+        if (a[j]==1)
+        {
+            printf("%d", j);
+            break;
+        }
+    }
+    
+    return 0;
+}
+```
+
+
+
+### 2차원배열
+
+##### 바둑판에 흰 돌 놓기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int x, y;
+    int a[20][20]={};
+    scanf("%d", &n);
+    
+    for (int i=1; i<=n; i++)
+    {
+        scanf("%d %d", &x, &y);
+        a[x][y] = 1;
+    }
+    
+    for (int j=1; j<20; j++)
+    {
+        for (int k=1; k<20; k++)
+        {
+            printf("%d ", a[j][k]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 바둑알 십자 뒤집기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a[20][20]={};
+    for (int i=1; i<20; i++)
+    {
+        for (int j=1; j<20; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    
+    int n;
+    scanf("%d", &n);
+    for (int k=1; k<=n; k++)
+    {
+        int x, y;
+        scanf("%d %d", &x, &y);
+        int m;
+        for (m=1; m<20; m++)
+        {
+            if (a[x][m]==0)
+            {
+                a[x][m] = 1;
+            }
+            else
+            {
+                a[x][m] = 0;
+            }
+        }
+        for (m=1; m<20; m++)
+        {
+            if (a[m][y]==0)
+            {
+                a[m][y] = 1;
+            }
+            else
+            {
+                a[m][y] = 0;
+            }
+        }
+    }
+    
+    for (int i=1; i<20; i++)
+    {
+        for (int j=1; j<20; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 설탕과자 뽑기
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int h, w, n, l, d, x, y;
+    scanf("%d %d", &h, &w);
+    scanf("%d", &n);
+    int a[h][w];
+    for (int i=0; i<h; i++)
+    {
+        for (int j=0; j<w; j++)
+        {
+            a[i][j] = 0;
+        }
+    }
+    
+    for (int i=1; i<=n; i++)
+    {
+        scanf("%d %d %d %d", &l, &d, &x, &y);
+        if (d==0)
+        {
+            for (int j=0; j<l; j++)
+            {
+                a[x-1][y-1+j] = 1;
+            }
+        }
+        else
+        {
+            for (int j=0; j<l; j++)
+            {
+                a[x-1+j][y-1] = 1;
+            }
+        }
+    }
+    
+    for (int i=0; i<h; i++)
+    {
+        for (int j=0; j<w; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+
+
+##### 성실한 개미
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a[10][10]={};
+    int n;
+    for (int i=0; i<10; i++)
+    {
+        for (int j=0; j<10; j++)
+        {
+            scanf("%d", &n);
+            a[i][j] = n;
+        }
+    }
+    
+    int x=1, y=1;
+    
+    while (1)
+    {
+        if (a[x][y] == 2)
+        {
+            a[x][y] = 9;
+            break;
+        }
+        
+        else if (a[x][y] == 0)
+        {
+            a[x][y] = 9;
+        }
+        
+        if (a[x][y+1] == 1 && a[x+1][y] == 1)
+        {
+            break;
+        }
+        
+        if (y+1 <= 9)
+        {
+            if (a[x][y+1] == 0 || a[x][y+1] == 2)
+            {
+                y += 1;
+            }
+            else
+            {
+                x += 1;
+            }
+        }
+    }
+    
+    for (int i=0; i<10; i++)
+    {
+        for (int j=0; j<10; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
 
