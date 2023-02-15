@@ -1,12 +1,27 @@
-# 📌SQL
-
-SQL 기초
+# MySQL 기초
 
 ------------------------
 
 
 
-### ✨SQL 개념
+### 목차
+
+1. [SQL 개념](#SQL-개념)
+2. [SQL 문법의 세 가지 종류](#SQL-문법의-세-가지-종류)
+3. [테이블 생성 및 삭제](#테이블-생성-및-삭제)
+4. [ALTER](#ALTER)
+5. [SELECT 쿼리문 순서](#SELECT-쿼리문-순서)
+6. [데이터 추가, 조회, 수정, 삭제](#데이터-추가-조회-수정-삭제)
+7. [COUNT, AVG, SUM, MAX, MIN](#COUNT-AVG-SUM-MAX-MIN)
+8. [LIKE](#LIKE)
+9. [ORDER BY](#ORDER-BY)
+10. [GROUP BY](#GROUP-BY)
+
+
+
+
+
+### SQL 개념
 
 - StructuredQueryLanguage
 - 관계형 데이터베이스 관리시스템(RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적으 프로그래밍 언어
@@ -15,7 +30,7 @@ SQL 기초
 
 
 
-### ✨SQL 문법의 세 가지 종류
+### SQL 문법의 세 가지 종류
 
 - DDL: 데이터 정의 언어
   - CREATE
@@ -36,7 +51,7 @@ SQL 기초
 
 
 
-### ✨테이블 생성 및 삭제
+### 테이블 생성 및 삭제
 
 - 테이블 생성
 
@@ -67,7 +82,71 @@ DROP TABLE <테이블이름>;
 
 
 
-### ✨데이터 추가, 조회, 수정, 삭제
+### ALTER
+
+- 테이블명 변경
+
+```sql
+ALTER TABLE <기존테이블이름>
+RENAME TO <새로운테이블이름>;
+```
+
+- 새로운 컬럼 추가
+
+```sql
+ALTER TABLE <테이블이름>
+ADD COLUMN <컬럼이름> datatype;
+```
+
+- 컬럼명 변경
+
+```sql
+ALTER TABLE <테이블이름>
+RENAME COLUMN <기존컬럼이름> TO <새로운컬럼이름>;
+```
+
+- 컬럼 삭제
+
+```sql
+ALTER TABLE <테이블이름>
+DROP COLUMN <컬럼이름>;
+```
+
+
+
+
+
+### SELECT 쿼리문 순서
+
+- 문법 순서
+  - SELECT
+  - FROM
+  - JOIN
+  - ON
+  - WHERE
+  - GROUP BY
+  - HAVING
+  - ORDER BY
+  - LIMIT / OFFSET
+- 실행 순서
+  - FROM
+  - ON
+  - JOIN
+  - WHERE
+  - GROUP BY
+  - HAVING
+  - SELECT
+  - DISTINCT
+  - ORDER BY
+  - LIMIT / OFFSET
+- SELECT절에서 지정한 Alias는 실행 순서상 WHERE나 GROUP BY 등에서 사용 불가능
+  - 다만 MySQL의 경우 GROUP BY, HAVING 절에서 사용 가능
+
+
+
+
+
+### 데이터 추가, 조회, 수정, 삭제
 
 - 데이터 추가
 
@@ -127,7 +206,7 @@ WHERE <조건절>;
 
 
 
-### ✨COUNT, AVG, SUM, MAX, MIN
+### COUNT, AVG, SUM, MAX, MIN
 
 - 조건 생략 가능
 
@@ -184,7 +263,7 @@ FROM 상품;
 
 
 
-### ✨LIKE
+### LIKE
 
 - 두 가지 와일드 카드(`_`와 `%`)와 함께 동작
 - `_`: 반드시 이 자리에 한 개의 문자가 존재
@@ -218,7 +297,7 @@ WHERE phone LIKE '%-345_-%';
 
 
 
-### ✨ORDER BY
+### ORDER BY
 
 - 정렬하기
 - ASC: 오름차순, DESC: 내림차순
@@ -241,7 +320,7 @@ LIMIT 10;
 
 
 
-### ✨GROUP BY
+### GROUP BY
 
 - 기준에 따라 데이터를 그룹으로 결합
 - 데이터를 요약할 때 주로 사용
@@ -261,35 +340,4 @@ GROUP BY last_name;
 
 
 
-
-
-### ✨ALTER
-
-- 테이블명 변경
-
-```sql
-ALTER TABLE <기존테이블이름>
-RENAME TO <새로운테이블이름>;
-```
-
-- 새로운 컬럼 추가
-
-```sql
-ALTER TABLE <테이블이름>
-ADD COLUMN <컬럼이름> datatype;
-```
-
-- 컬럼명 변경
-
-```sql
-ALTER TABLE <테이블이름>
-RENAME COLUMN <기존컬럼이름> TO <새로운컬럼이름>;
-```
-
-- 컬럼 삭제
-
-```sql
-ALTER TABLE <테이블이름>
-DROP COLUMN <컬럼이름>;
-```
 
