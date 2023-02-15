@@ -4,11 +4,12 @@
 
 ### 목차
 
-1. [1175](#error-code-1175-you-are-using-safe-update-mode)
+1. [1175](#1175-you-are-using-safe-update-mode)
+1. [1248](#1248-Every-derived-table-must-have-its-own-alias)
 
 
 
-### error code: 1175. you are using safe update mode
+### 1175. you are using safe update mode
 
 - 다수의 데이터를 키값을 사용하지 않고 삭제 또는 수정하려고 시도했을 때 발생
 
@@ -43,4 +44,22 @@
 ![1175-2](MySQL_error.assets/1175-2.png)
 
 `SQL Editor > Safe Updates` 체크박스 해제, `OK` 
+
+
+
+
+
+### 1248. Every derived table must have its own alias
+
+- 서브쿼리에서 alias를 주지 않았을 경우 발생
+
+![1248-1](MySQL_error.assets/1248-1.png)
+
+- 해결 방법
+
+  ![1248-2](MySQL_error.assets/1248-2.png)
+
+  - 서브쿼리에 alias 지정
+
+
 
